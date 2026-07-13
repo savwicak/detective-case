@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Detective Files PRO</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px,2px); }
+  40% { transform: translate(2px,-2px); }
+  60% { transform: translate(-1px,1px); }
+  80% { transform: translate(1px,-1px); }
+  100% { transform: translate(0); }
+}
+
+.glitch {
+  animation: glitch 0.3s infinite;
+}
+</style>
+</head>
+
+<body class="bg-black text-gray-200">
+
+<header class="p-6 text-center border-b border-gray-800 bg-gray-900">
+  <h1 class="text-2xl font-bold">🕵️ DETECTIVE FILES PRO</h1>
+  <p class="text-yellow-400 text-sm">CLASSIFIED SYSTEM v2.0</p>
+</header>
+
+<!-- HOME -->
+<div id="home" class="p-6 max-w-3xl mx-auto">
+
+  <h2 class="text-xl mb-4">Select Investigation Case</h2>
+
+  <div id="caseList" class="space-y-3"></div>
+
+  <div class="mt-6 text-green-400">
+    🔓 Secret Case Unlock Progress: <span id="progress">0</span>/3 correct
+  </div>
+
+</div>
+
+<!-- CASE -->
+<div id="case" class="hidden p-6 max-w-3xl mx-auto">
+
+  <button onclick="backHome()" class="mb-4 px-3 py-2 bg-gray-800 rounded">⬅ Back</button>
+
+  <h2 id="caseTitle" class="text-2xl font-bold mb-3"></h2>
+
+  <div class="mb-4">
+    <h3 class="text-blue-400 font-semibold">🧾 Summary</h3>
+    <p id="summary"></p>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="text-green-400 font-semibold">📍 Evidence</h3>
+    <div id="evidence" class="space-y-2"></div>
+  </div>
+
+  <div class="mt-4">
+    <h3 class="text-purple-400 font-semibold mb-2">🧠 Choose Suspect</h3>
+
+    <div class="flex gap-2">
+      <button onclick="choose('A')" class="bg-gray-800 px-3 py-2 rounded">A</button>
+      <button onclick="choose('B')" class="bg-gray-800 px-3 py-2 rounded">B</button>
+      <button onclick="choose('C')" class="bg-gray-800 px-3 py-2 rounded">C</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- RESULT -->
+<div id="result" class="hidden p-6 max-w-3xl mx-auto">
+
+  <h2 class="text-2xl font-bold mb-3">📊 Result</h2>
+
+  <div id="resultText" class="p-4 bg-gray-900 border border-gray-800 rounded"></div>
+
+  <div class="mt-4 text-yellow-400">
+    Accuracy: <span id="score">0</span>%
+  </div>
+
+  <button onclick="backHome()" class="mt-4 bg-gray-800 px-3 py-2 rounded">Home</button>
+
+</div>
+
+<script>
+
+let currentCase = null;
+let correctCount = 0;
+
+const cases = [
+  {
+    title: "CASE 001 — Missing Laptop",
+    answer: "C",
+    summary: "Laptop disappeared during break time.",
+    evidence: [
+      "✔ CCTV shows 3 students",
+      "⚠ Door lock damaged",
+      "✔ Teacher last used laptop"
+    ]
+  },
+  {
+    title: "CASE 002 — Classroom Theft",
+    answer: "B",
+    summary: "Class fund money disappeared.",
+    evidence: [
+      "✔ Only 2 students present",
+      "⚠ Window open slightly",
+      "✔ CCTV partially blocked"
+    ]
+  },
+  {
+    title: "CASE 003 — Secret Glitch Case",
+    answer: "A",
+    summary: "System logs are inconsistent... something is wrong.",
+    evidence: [
+      "⚠ LOG ERROR detected",
+      "⚠ Timestamp mismatch",
+      "✔ Unknown fingerprint found"
+    ]
+  }
+];
+
+// generate case list
+function loadCases(){
+  let html = "";
+  cases.forEach((c,i)=>{
+    html += `
+      <div onclick="openCase(${i})"
+      class="cursor-pointer p-4 bg-gray-900 hover:bg-gray-800 border border-gray-800 rounded">
+        📁 ${c.title}
+      </div>
+    `;
+  });
+  document.getElementById("caseList").innerHTML = html;
+}
+
+loadCases();
+
+function openCase(id){
+  currentCase = id;
+
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("case").classList.remove("hidden");
+
+  let c = cases[id];
+
+  document.getElementById("caseTitle").innerText = c.title;
+  document.getElementById("summary").innerText = c.summary;
+
+  let ev = "";
+  c.evidence.forEach(e=>{
+    ev += `<div class="p-2 bg-gray-900 border border-gray-800 rounded">${e}</div>`;
+  });
+
+  document.getElementById("evidence").innerHTML = ev;
+}
+
+function choose(opt){
+  document.getElementById("case").classList.add("hidden");
+  document.getElementById("result").classList.remove("hidden");
+
+  let c = cases[currentCase];
+  let correct = (opt === c.answer);
+
+  if(correct){
+    correctCount++;
+  }
+
+  let score = Math.round((correctCount / cases.length) * 100);
+
+  document.getElementById("score").innerText = score;
+
+  document.getElementById("progress").innerText = correctCount;
+
+  let text = correct
+    ? "✔ Correct analysis detected."
+    : "❌ Wrong deduction. Evidence misinterpreted.";
+
+  // SECRET GLITCH EFFECT
+  if(currentCase === 2){
+    document.body.classList.add("glitch");
+    text += " SYSTEM ERROR: REALITY UNSTABLE...";
+    setTimeout(()=>document.body.classList.remove("glitch"),1000);
+  }
+
+  document.getElementById("resultText").innerText = text;
+}
+
+function backHome(){
+  document.getElementById("case").classList.add("hidden");
+  document.getElementById("result").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
