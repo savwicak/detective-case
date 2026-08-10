@@ -16,100 +16,288 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Physics2DPlugin.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/TextPlugin.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
 </head>
 <body class="eb-garamond overflow-x-hidden bg-black">
   
   <header>
-    <nav class="navbar top-0 w-full p-4 scroll-m-1:fixed bg-white">
-      <div class="flex items-center gap-10 text-black">
+    <nav
+    id="navbar"
+    class="navbar fixed top-0 left-0 z-50 w-full bg-white p-4">
+    <div class="flex items-center gap-10 text-black">
 
-        <h1 class="instrument-regular font-bold nav-text text-2xl hover:underline">Detective.co</h1>
+        <h1 class="instrument-regular font-bold nav-text text-2xl hover:underline">
+            Detective.co
+        </h1>
 
         <div class="flex items-center gap-6">
-          <a class="nav-text hover:underline" href="#">Home</a>
-          <a class="nav-text hover:underline" href="#">About</a>
-          <a class="nav-text hover:underline" href="#">Case</a>
+            <a class="nav-text hover:underline" href="#">Home</a>
+            <a class="nav-text hover:underline" href="#">About</a>
+            <a class="nav-text hover:underline" href="#">Case</a>
         </div>
-      </div>
 
-    </nav>
+    </div>
+</nav>
   </header>
-
   <main class="mx-auto">
-
-    <section class="con h-250 overflow-hidden w-full">
-      <div id="title" class="h-screen w-full bg-white flex items-center justify-center">
-          <h1 class="text-8xl font-bold instrument-bold text-black">Search?</h1>
+    <section class="w-full min-h-screen overflow-hidden">
+      <div id="title" class="min-h-screen bg-white flex items-center justify-center">
+        <h1 class="text-8xl font-bold instrument-bold text-black">
+          Search?
+        </h1>
       </div>
     </section>
+    <section id="hero" class="flex items-center min-h-[120vh] w-full overflow-hidden">
+        <div class="container mx-10">
+            <p id="text-up" class="text-2xl md:text-4xl text-gray-400 opacity-40 mb-4">
+                Losing is hard...
+            </p>
+            <h1 id="hero-title"
+                class="instrument-regular text-5xl md:text-7xl lg:text-8xl text-white opacity-80 mb-6">
+                #MISSION 001
+                Case Opened
+            </h1>
 
-    <section id="hero" class="flex min-h-screen overflow-hidden w-full">
-      <div class="container mx-10 my-20">
+            <p id="hero-subtitle"
+                class="text-xl md:text-3xl lg:text-4xl text-white opacity-60">
+                Hello, people who got robbed!
+            </p>
+        </div>
+    </section>
+    <section class="horizontal-section relative min-h-[140vh] w-full overflow-hidden text-white">
+        <div class="absolute left-10 right-10 top-10 z-20 flex items-center justify-between border-b border-white/20 pb-4">
+            <span class="text-xs tracking-[0.4em] text-white/50">VISUAL EVIDENCE</span>
+            <span class="text-xs tracking-[0.3em] text-white/40">FILE / 002</span>
+        </div>
 
-          <p id="text-up" class="text-5xl text-gray-400 mb-4 opacity-40">
-              2026 is hard.........
-          </p>
+        <div class="image-track flex w-max items-center gap-16 px-10 pt-40">
+            <div class="group relative shrink-0">
+                <div class="mb-4 flex items-center justify-between text-xs tracking-[0.3em] text-white/40">
+                    <span>IMG_001</span>
+                    <span>01</span>
+                </div>
+                <div class="relative h-125 w-175 overflow-hidden bg-black">
+                    <img
+                        class="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-70"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFVyTGJXzvRSqXroeULQJheO8fUWqat2cUQ5RMiy38acwtdFKNJvelufuw&s=10"
+                        alt="Evidence 01"
+                    >
+                    <div class="absolute bottom-5 left-5 text-xs tracking-[0.3em] text-white/60">
+                        EVIDENCE A
+                    </div>
+                </div>
+            </div>
+            <div class="group relative shrink-0">
+                <div class="mb-4 flex items-center justify-between text-xs tracking-[0.3em] text-white/40">
+                    <span>IMG_002</span>
+                    <span>02</span>
+                </div>
+                <div class="relative h-100 w-137.5 overflow-hidden bg-black">
+                    <img
+                        class="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-70"
+                        src="https://sddefenseattorneys.com/wp-content/uploads/2024/05/what-is-first-degree-robbery.jpg"
+                        alt="Evidence 02"
+                    >
+                    <div class="absolute bottom-5 left-5 text-xs tracking-[0.3em] text-white/60">
+                        EVIDENCE B
+                    </div>
+                </div>
+            </div>
+            <div class="group relative shrink-0">
+                <div class="mb-4 flex items-center justify-between text-xs tracking-[0.3em] text-white/40">
+                    <span>IMG_003</span>
+                    <span>03</span>
+                </div>
 
-          <h1 id="hero-title" class="text-8xl text-white opacity-80 mb-4 instrument-regular">
-              #MISSON 001 Case Opened
-          </h1>
+                <div class="relative h-137.5 w-187.5 overflow-hidden bg-black">
+                    <img
+                        class="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-70"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Z39FidrdRdWBb30rZRZC9xZIZGtPh7wCnuQ4qZuhevyKqpE-9CJJqhvD&s=10"
+                        alt="Evidence 03"
+                    >
+                    <div class="absolute bottom-5 left-5 text-xs tracking-[0.3em] text-white/60">
+                        EVIDENCE C
+                    </div>
+                </div>
+            </div>
+            <div class="group relative shrink-0">
+                <div class="mb-4 flex items-center justify-between text-xs tracking-[0.3em] text-white/40">
+                    <span>IMG_004</span>
+                    <span>04</span>
+                </div>
+                <div class="relative h-107.5 w-150 overflow-hidden bg-black">
+                    <img
+                        class="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-70"
+                        src="https://i.imgflip.com/9v4cbv.jpg?a495864"
+                        alt="Evidence 04"
+                    >
+                    <div class="absolute bottom-5 left-5 text-xs tracking-[0.3em] text-white/60">
+                        EVIDENCE D
+                    </div>
+                </div>
+            </div>
+            <div class="group relative shrink-0">
+                <div class="mb-4 flex items-center justify-between text-xs tracking-[0.3em] text-white/40">
+                    <span>IMG_005</span>
+                    <span>05</span>
+                </div>
+                <div class="relative h-125 w-175 overflow-hidden bg-black">
+                    <img
+                        class="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-70"
+                        src="https://www1.wsrb.com/hubfs/buildingmetrix/images/blog/arson-awareness-week/arson.jpg"
+                        alt="Evidence 05"
+                    >
+                    <div class="absolute bottom-5 left-5 text-xs tracking-[0.3em] text-white/60">
+                        EVIDENCE E
+                    </div>
+                </div>
+            </div>
+            <div class="group relative shrink-0">
+                <div class="mb-4 flex items-center justify-between text-xs tracking-[0.3em] text-white/40">
+                    <span>IMG_006</span>
+                    <span>06</span>
+                </div>
+                <div class="relative h-112.5 w-162.5 overflow-hidden bg-black">
+                    <img
+                        class="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-70"
+                        src="https://www.slafereklaw.ca/wp-content/uploads/2023/09/Assault-Vs.-Aggravated-Assault-Key-Differences-And-Implications.png"
+                        alt="Evidence 06"
+                    >
+                    <div class="absolute bottom-5 left-5 text-xs tracking-[0.3em] text-white/60">
+                        EVIDENCE F
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-10 right-10 flex justify-between border-t border-white/20 pt-4">
+            <span class="text-xs tracking-[0.3em] text-white/70">INVESTIGATE</span>
+            <span class="text-xs tracking-[0.3em] text-white/70">FILE / 003</span>
+        </div>
+    </section>
+    <section class="flex min-h-[120vh] overflow-hidden w-full">
+        <div class="container mx-10 my-60">
+        <p id="hero-desc" class="text-8xl text-white opacity-25 text-justify">
+            <span class="jump">Have</span>
+            <span class="jump">you</span>
+            <span class="jump">been</span>
+            <span class="jump">robbed</span>
+            <span class="jump">or</span>
+            <span class="jump">become</span>
+            <span class="jump">the</span>
+            <span class="jump">victim</span>
+            <span class="jump">of</span>
+            <span class="jump">a</span>
+            <span class="jump"> <i id="wobble">crime?</i></span>
 
-          <p id="hero-subtitle" class="text-4xl text-white opacity-60 mb-40">
-              Hello People who get robbed!
-          </p>
-      </div>
-  </section>
-  <section class="flex min-h-screen overflow-hidden w-full">
-    <div class="container mx-10 my-20">
-      <p id="hero-desc" class="text-8xl text-white opacity-25 text-justify">
-        <span class="jump">Have</span>
-        <span class="jump">you</span>
-        <span class="jump">been</span>
-        <span class="jump">robbed</span>
-        <span class="jump">or</span>
-        <span class="jump">become</span>
-        <span class="jump">the</span>
-        <span class="jump">victim</span>
-        <span class="jump">of</span>
-        <span class="jump">a</span>
-        <span class="jump"> <i id="wobble">crime?</i></span>
+            <span class="jump text-white/30">don't</span>
+            <span class="jump text-white/30">know</span>
+            <span class="jump text-white/30">where</span>
+            <span class="jump text-white/30">to</span>
+            <span class="jump text-white/30">report</span>
+            <span class="jump text-white/30">a</span>
+            <span class="jump text-white/30">case?</span>
 
-        <span class="jump">Every</span>
-        <span class="jump">investigation</span>
-        <span class="jump">starts</span>
-        <span class="jump">with</span>
-        <span class="jump">a</span>
-        <span class="jump">single</span>
-        <span class="jump">clue.</span>
-
-        <span class="jump">Report</span>
-        <span class="jump">the</span>
-        <span class="jump">case,</span>
-        <span class="jump">gather</span>
-        <span class="jump">evidence,</span>
-        <span class="jump">and</span>
-        <span class="jump">work</span>
-        <span class="jump">with</span>
-        <span class="jump">experienced</span>
-        <span class="jump">detectives</span>
-        <span class="jump">to</span>
-        <span class="jump">find</span>
-        <span class="jump">the</span>
-        <span class="jump">truth.</span>
-    </p>
-    </div>
-  </section>
+            <span class="jump">Does</span>
+            <span class="jump">reporting</span>
+            <span class="jump">it</span>
+            <span class="jump">to</span>
+            <span class="jump">the</span>
+            <span class="jump">police</span>
+            <span class="jump">feel</span>
+            <span class="jump"><i id="jump2">intimidating?</i></span>
+        </p>
+        </div>
+    </section>
+    <section
+        id="about"
+        class="relative min-h-[160vh] w-full overflow-hidden bg-black text-white"
+    >
+        <div class="absolute inset-0">
+            <div
+                class="absolute inset-0 opacity-[0.06]"
+                style="
+                    background-image:
+                    linear-gradient(#fff 1px, transparent 1px),
+                    linear-gradient(90deg, #fff 1px, transparent 1px);
+                    background-size: 70px 70px;
+                "
+            ></div>
+            <div class="absolute -left-20 top-[25%] whitespace-nowrap opacity-[0.025]">
+                <h1 class="instrument-bold text-[20rem]">WE GOT YOU!</h1>
+            </div>
+        </div>
+        <div class="relative z-10 flex justify-between px-10 pt-10">
+            <p class="text-xs tracking-[0.5em] text-white/40">DETECTIVE.CO</p>
+            <p class="font-mono text-xs tracking-[0.3em] text-white/20">FILE / 004</p>
+        </div>
+        <div class="relative z-10 mx-10 mt-[25vh]">
+            <p class="text-xs tracking-[0.6em] text-white/30">WHO ARE WE?</p>
+            <h1 class="about-title instrument-bold mt-6 max-w-6xl text-8xl leading-[0.8] md:text-[11rem]">
+                WE<br>CATCH<br>THE<br>BAD GUYS.
+            </h1>
+            <div class="mt-24 grid gap-20 md:grid-cols-2">
+                <div>
+                    <p class="max-w-xl text-xl leading-relaxed text-white/40">
+                        Detective.co exists for one reason:
+                        to find what others overlook.
+                        Every case begins with a question,
+                        and every question leaves a trace.
+                    </p>
+                </div>
+                <div class="md:pt-20">
+                    <p class="max-w-xl text-xl leading-relaxed text-white/40">
+                        We investigate the strange,
+                        the missing, and the unexplained.
+                        No matter where the trail leads,
+                        we follow it.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div
+            id="secret-text"
+            class="absolute left-[50%] top-[75%]
+                z-10 -translate-x-1/2
+                text-center opacity-30"
+        >
+            <p class="font-mono text-xs tracking-[0.5em] text-red-400">CLASSIFIED INFORMATION</p>
+            <h2 class="instrument-bold mt-5 text-6xl">LOOK CLOSER.</h2>
+            <p class="mt-5 max-w-lg text-sm text-white/30">
+                Not everything is visible at first glance.
+                Move your cursor.
+            </p>
+        </div>
+        <img
+            id="magnifier"
+            src="https://static.vecteezy.com/system/resources/thumbnails/058/264/303/small/a-highquality-magnifying-glass-with-a-sleek-black-handle-and-silver-accents-free-png.png"
+            alt=""
+            class="pointer-events-none fixed left-0 top-0 z-999
+                hidden w-52 md:block"
+        />
+        <div
+            class="absolute bottom-10 left-10 right-10
+                flex justify-between border-t border-white/10 pt-5"
+        >
+            <span class="font-mono text-[10px] tracking-[0.4em] text-white/20">
+                NOTHING IS ACCIDENTAL
+            </span>
+            <span class="font-mono text-[10px] tracking-[0.4em] text-white/20">
+                KEEP LOOKING
+            </span>
+        </div>
+    </section>
   </main>
 
-  
-  <footer>
-    @savanna wicaksono uhuy
+  <footer class="text-white/70 text-center">
+    @ Savanna Wicaksono
   </footer>
 
-
-  <script src="src/app.js"></script>
   <script src="src/js/scroll.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="src/app.js"></script>
+  <script src="src/js/news.js"></script>
+  <script src="src/js/vhs.js"></script>
+  <script src="src/js/about.js"></script>
+
 </body>
 </html>
+      

@@ -4,133 +4,269 @@ nav.to({}, {duration:0.5})
 
 //header
 .set(".navbar", {
-    x:"100%"
+    x:"100"
 })
 
 .set(".nav-text", {
-    y:"-100%",
+    y:"-100",
     opacity: 0,
     duration:2.0
 })
 
 .to(".navbar", {
-    x: "0%",
+    x: "0",
     duration: 1.2,
     ease: "power1.inOut"
 })
 
 .to(".nav-text", {
-    y:"0%",
+    y:"0",
     opacity: 100,
     ease: "back",
     stagger: 0.2
 })
 
-//main
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.to("#title", {
-    keyframes: [
-        { scale: 20 },
-        { scale: 40 },
-        { scale: 80 },
-        { scale: 100 },
-    ],
-    opacity: 0,
-
+    scale: 300,          
     ease: "none",
-
     scrollTrigger: {
         trigger: ".con",
-        start: "top top",
-        end: "+=2900",
+        start: "top end",
+        end: "+=1700",
         scrub: true,
         pin: true
     }
 });
 
-gsap.registerPlugin(ScrollTrigger);
-
-const tl = gsap.timeline({
+const hero = gsap.timeline({
     scrollTrigger: {
         trigger: "#hero",
-        start: "top 85%",
-        end: "bottom 85%", // panjang area animasi
-        scrub: 1,          // atau true
+        start: "top 80%",
+        end: "bottom 25%",
+        scrub: 1
     }
 });
 
-tl.from("#text-up", {
-    x: -420,
-    y: 700,
+hero
+.from("#text-up", {
+    x: -500,
+    y: 300,
+    scale: 1.2,
     opacity: 0,
-    duration: 1.6,
-    ease: "expo.out"
+    duration: 1.2,
+    ease: "power4.out"
 })
 
 .from("#hero-title", {
-    x: -120,
-    y: 750,
+    y: 250,
+    scale: 1.3,
     opacity: 0,
-    duration: 1.6,
-    ease: "expo.out"
-}, "-=1.15")
+    duration: 1.2,
+    ease: "power4.out"
+}, "-=0.9")
 
 .from("#hero-subtitle", {
-    x: -100,
-    y: 400,
+    y: 120,
     opacity: 0,
-    duration: 1.3,
-    ease: "expo.out"
-}, "-=1.05")
+    duration: 1,
+    ease: "power4.out"
+}, "-=0.8")
 
-// Geser ke kanan
 .to("#text-up", {
-    x: 2000,
-    ease: "none",
-    duration: 1
+    x: 600,
+    y:-300,
+    opacity: 0,
+    duration: 0.4
 })
 
 .to("#hero-title", {
-    x: 2000,
-    ease: "none",
-    duration:1.3
+    x: 600,
+    y:-300,
+    opacity: 0,
+    duration: 1
 }, "<")
 
 .to("#hero-subtitle", {
-    x: 2000,
-    ease: "none",
-    duration:1.5
+    x: 600,
+    y:-300,
+    opacity: 0,
+    duration: 1
 }, "<");
+
+
+
+const track = document.querySelector(".image-track");
+
+if (track) {
+    gsap.to(track, {
+        x: () => -(track.scrollWidth - window.innerWidth),
+        ease: "none",
+        start: "bottom",
+
+        scrollTrigger: {
+            trigger: ".horizontal-section",
+            start: "top",
+            end: () => `+=${track.scrollWidth * 0.4}`,
+            scrub: 1,
+            pin: true,
+            invalidateOnRefresh: true
+        }
+    });
+}
+
 
 gsap.from("#wobble", {
     opacity: 0,
-    y: 80,
-    scale: 0.9,
+    y: 200,
+    scale: 2,
     duration: 1.5,
     ease: "elastic.out(1,0.4)",
 
+});
+
+const jumpTL = gsap.timeline({
     scrollTrigger: {
-        trigger: "#wobble",
-        start: "top 80%",
-        opacity :150,
-        end: "top 30%",
-        scrub: true
+        trigger: "#hero-desc",
+        start: "top 30%",
+        end: "top",
+        scrub: 1,
+        pin:true
     }
 });
 
-gsap.from(".jump", {
-    y: 80,
+jumpTL.from(".jump", {
+    y: 580,
     opacity: 0,
-    scale: 0.8,
-    ease: "back.out(2)",
+    ease: "back.out(3)",
+    stagger: 0.08
+});
 
-    stagger: {
-        each: 0.3
-    },
+gsap.registerPlugin(ScrollTrigger);
+
+const offerTL = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#offer",
+        start: "top top",
+        end: "+=2000",
+        scrub: 1,
+        pin: true,
+    }
+});
+
+const randomMoves = [];
+
+for (let i = 0; i < 20; i++) {
+    randomMoves.push({
+        x: gsap.utils.random(500, 1200),
+        y: gsap.utils.random(-200, 600),
+        scale: gsap.utils.random(0.6, 1),
+        duration: gsap.utils.random(0.3, 0.7)
+    });
+}
+
+randomMoves.push({
+    x: 300,
+    y: 200,
+    scale: 100,
+    duration: 1
+});
+
+offerTL.to("#offer-circle", {
+    keyframes: randomMoves,
+    opacity:1,
+    ease: "sine.inOut"
+});
+
+gsap.set(".offer-text", {
+    y: 300,
+    opacity: 0
+});
+
+gsap.set(".offer-text:first-child", {
+    y: 0,
+    opacity: 1
+});
+const offerTextTL = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#offer",
+        start: "top 20%",
+        end: "+=2500",
+        scrub: 1,
+    }
+});
+
+offerTextTL
+    .to(".offer-text:nth-child(1)", {
+        y: -300,
+        opacity: 0,
+        duration: 1
+    })
+
+    .to(".offer-text:nth-child(2)", {
+        y: 0,
+        opacity: 1,
+        duration: 1
+    })
+
+    .to(".offer-text:nth-child(2)", {
+        y: -300,
+        opacity: 0,
+        duration: 1
+    })
+
+    .to(".offer-text:nth-child(3)", {
+        y: 0,
+        opacity: 1,
+        duration: 1
+    })
+
+    .to(".offer-text:nth-child(3)", {
+        y: -300,
+        opacity: 0,
+        duration: 1
+    })
+
+    .to(".offer-text:nth-child(4)", {
+        y: 0,
+        opacity: 1,
+        duration: 1
+    })
+
+    .to(".offer-text:nth-child(4)", {
+        y: -300,
+        opacity: 0,
+        duration: 1
+    })
+
+tl3.from(".jump2", {
+    scale: 8,
+    y: 150,
+    opacity: 0,
+    rotation: () => gsap.utils.random(-20, 20),
+    stagger: 0.08,
+    ease: "expo.out",
+    duration: 0.5,
+})
+.to(".jump2", {
+    keyframes: [
+        { scale: 1.15, duration: 0.05 },
+        { scale: 0.95, duration: 0.05 },
+        { scale: 1.05, duration: 0.05 },
+        { scale: 1 },
+    ],
+    stagger: 0.08
+});
+gsap.to(".world-map", {
+    scale: 1.15,
+    rotation: 2,
+    opacity: 0.5,    ease: "none",
 
     scrollTrigger: {
-        trigger: "#hero-desc",
-        start: "top 90%",
-        end: "top 20%",
+        trigger: "#world",
+        start: "top bottom",
+        end: "bottom top",
         scrub: 1
     }
 });

@@ -1,20 +1,60 @@
-import Lenis from "lenis";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis({
-  duration: 1.2,
-  smoothWheel: true,
-  wheelMultiplier: 1,
-  touchMultiplier: 2,
+    autoRaf: false,
+    smoothWheel: true,
+    wheelMultiplier: 0.2,
+    lerp: 0.05,
 });
 
 lenis.on("scroll", ScrollTrigger.update);
 
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
+    lenis.raf(time * 10000);
 });
 
 gsap.ticker.lagSmoothing(0);
+
+let lastScroll = 0;
+let scrollTimeout;
+
+lenis.on("scroll", ({ scroll }) => {
+
+    // scroll ke bawah
+    if (scroll > lastScroll && scroll > 100) {
+
+        gsap.to("#navbar", {
+            y: "-100%",
+            duration: 0.4,
+            ease: "power2.out"
+        });
+
+    }
+
+    // scroll ke atas
+    if (scroll < lastScroll) {
+
+        gsap.to("#navbar", {
+            y: "0%",
+            duration: 0.4,
+            ease: "power2.out"
+        });
+
+    }
+
+    lastScroll = scroll;
+
+    // muncul lagi setelah berhenti scrolling
+    clearTimeout(scrollTimeout);
+
+    scrollTimeout = setTimeout(() => {
+
+        gsap.to("#navbar", {
+            y: "0%",
+            duration: 0.5,
+            ease: "power3.out"
+        });
+
+    }, 300);
+
+});

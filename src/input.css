@@ -43,3 +43,9 @@
 .jump{
     display:inline-block;
 }
+
+.jump2{
+    display: inline-block;
+    transform-origin: center;
+    will-change: transform;
+}
