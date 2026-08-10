@@ -612,104 +612,160 @@
         class="relative min-h-[290vh] w-full overflow-hidden bg-white text-black"
     >
         <div
-            class="absolute inset-[5%] rounded-sm border border-black/10
-                bg-[#ddd5c5] shadow-inner"
+            class="absolute inset-[1%] overflow-hidden border border-black/10 bg-[#d8d0c0]"
         >
             <div
-                class="absolute inset-0 opacity-[0.08]"
+                class="absolute inset-0 opacity-[0.12]"
                 style="
                     background-image:
-                    radial-gradient(#000 0.6px, transparent 6px);
-                    background-size: 6px 6px;
-                "
-            ></div>
+                    radial-gradient(#000 0.7px, transparent 0.7px);
+                    background-size: 5px 5px;">
+            </div>
+            <div class="absolute left-0 right-0 top-[18%] h-px bg-black/5"></div>
+            <div class="absolute left-0 right-0 top-[48%] h-px bg-black/5"></div>
+            <div class="absolute left-0 right-0 top-[78%] h-px bg-black/5"></div>
         </div>
-        <div class="relative z-20 mx-10 mt-20">
-            <p class="text-xs tracking-[0.5em] text-black/40">CASE FILES</p>
-            <h1 class="instrument-bold mt-50 text-7xl leading-[0.8] md:text-9xl">
+        <div class="relative z-30 mx-10 pt-16">
+            <div class="flex items-center justify-between border-b border-black/20 pb-5">
+                <div>
+                    <p class="font-mono text-[10px] tracking-[0.5em] text-black/40">DETECTIVE.CO</p>
+                    <p class="mt-2 text-xs italic text-black/30">internal investigation archive</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">FILE // 001—005</p>
+                    <p class="mt-2 text-[10px] tracking-[0.3em] text-red-900/60">ACTIVE INVESTIGATION</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-30 mx-10 mt-32">
+            <p class="mb-6 text-xs tracking-[0.6em] text-black/40">CASE FILES</p>
+            <h1 class="instrument-bold max-w-5xl text-8xl leading-[0.78] md:text-[10rem]">
                 CONNECT<br>THE<br>CLUES.
             </h1>
+            <div class="mt-10 flex max-w-xl items-start gap-5">
+                <span class="mt-2 h-px w-16 bg-red-900"></span>
+                <p class="text-sm leading-relaxed text-black/45">
+                    Five cases.
+                    Five stories.
+                    One investigation.
+                    Follow the evidence carefully.
+                    Nothing on this board was placed here by accident.
+                </p>
+            </div>
         </div>
         <!-- red string -->
         <svg
             class="pointer-events-none absolute inset-0 z-10 h-full w-full"
-            viewBox="0 0 1440 1800"
+            viewBox="0 0 1440 2400"
             preserveAspectRatio="none"
         >
 
             <!-- center to theft -->
             <path
-                d="M720 920 C600 820 400 780 240 700"
+                d="M720 1060
+                C610 950 470 850 230 820"
                 fill="none"
-                stroke="#8f1d1d"
+                stroke="#7f1717"
                 stroke-width="3"
             />
 
             <!-- center to missing -->
             <path
-                d="M720 920 C850 800 1040 720 1200 650"
+                d="M720 1060
+                C850 920 1050 820 1220 760"
                 fill="none"
-                stroke="#8f1d1d"
+                stroke="#7f1717"
                 stroke-width="3"
             />
 
-            <!-- center to fraud -->
+            <!-- center tp fraud -->
             <path
-                d="M720 920 C600 1050 430 1120 300 1190"
+                d="M720 1060
+                C580 1180 420 1330 250 1420"
                 fill="none"
-                stroke="#8f1d1d"
+                stroke="#7f1717"
                 stroke-width="3"
             />
 
-            <!-- center tp cyber -->
+            <!-- center to cyber -->
             <path
-                d="M720 920 C850 1050 1050 1100 1180 1190"
+                d="M720 1060
+                C880 1180 1060 1320 1210 1440"
                 fill="none"
-                stroke="#8f1d1d"
+                stroke="#7f1717"
                 stroke-width="3"
             />
 
             <!-- center to unknown -->
             <path
-                d="M720 920 C700 1100 700 1250 720 1530"
+                d="M720 1060
+                C690 1260 700 1570 720 1900"
                 fill="none"
-                stroke="#8f1d1d"
+                stroke="#7f1717"
                 stroke-width="3"
+            />
+
+            <!-- fraud to cyber -->
+            <path
+                d="M250 1420
+                C520 1280 880 1250 1210 1440"
+                fill="none"
+                stroke="#7f1717"
+                stroke-width="2"
+                opacity=".55"
             />
 
         </svg>
         <div
             id="main-evidence"
-            class="absolute left-1/2 top-[51%] z-20
-                -translate-x-1/2 -translate-y-1/2
-                rotate-2"
+            class="absolute left-1/2 top-[43%] z-20
+            -translate-x-1/2 -translate-y-1/2
+            rotate-2"
         >
             <div
-                class="absolute -top-3 left-1/2 z-30
-                    h-5 w-5 -translate-x-1/2
-                    rounded-full bg-red-900 shadow-lg"
+                class="absolute -top-4 left-1/2 z-30
+                h-6 w-6 -translate-x-1/2
+                rounded-full bg-red-950
+                shadow-[0_3px_8px_rgba(0,0,0,.4)]"
             ></div>
-            <div class="w-82.5 bg-white p-4 pb-8 shadow-2xl">
+            <div
+                class="relative w-87.5 bg-[#faf9f5]
+                p-5 pb-10 shadow-[0_20px_45px_rgba(0,0,0,.25)]"
+            >
+                <div
+                    class="absolute right-4 top-4 rotate-[8deg]
+                    border-2 border-red-900/60 px-3 py-1
+                    font-mono text-[9px] tracking-[0.3em]
+                    text-red-900/70"
+                >
+                    EVIDENCE
+                </div>
                 <img
                     src="src/assets/grace.jpg"
-                    class="h-75 w-full object-cover grayscale"
+                    class="h-75 w-full object-cover grayscale contrast-125"
                     alt="main evidence"
                 >
-                <p class="mt-4 font-mono text-xs">EVIDENCE // 000</p>
-                <p class="mt-2 text-sm italic text-black/50">central investigation</p>
+                <div class="mt-5">
+                    <p class="font-mono text-[10px] tracking-[0.3em] text-black/40">EVIDENCE // 000</p>
+                    <h2 class="instrument-bold mt-2 text-5xl">THE ORIGIN</h2>
+                    <p class="mt-2 text-sm italic text-black/40">everything starts somewhere</p>
+                </div>
             </div>
         </div>
         <div
             id="case-001"
-            class="case-card absolute left-[8%] top-[38%] z-20
-                rotate-[-7deg]"
+            class="case-card absolute left-[6%] top-[34%] z-20 rotate-[-8deg]"
         >
             <div
                 class="absolute -top-3 left-1/2 z-30
-                    h-5 w-5 -translate-x-1/2
-                    rounded-full bg-red-900 shadow-lg"
+                h-5 w-5 -translate-x-1/2
+                rounded-full bg-red-900 shadow-lg"
             ></div>
-            <div class="w-65[260px] bg-white p-3 pb-6 shadow-xl">
+            <div class="w-67.5] bg-white p-3 pb-7 shadow-2xl">
+                <div class="mb-3 flex justify-between font-mono text-[9px] text-black/40">
+                    <span>001</span>
+                    <span>OPEN</span>
+                </div>
                 <img
                     src="src/assets/grace.jpg"
                     class="h-47.5 w-full object-cover grayscale"
@@ -717,22 +773,26 @@
                 >
                 <div class="mt-4 px-2">
                     <p class="font-mono text-[10px] text-black/40">CASE 001</p>
-                    <h2 class="instrument-bold text-4xl">THEFT</h2>
-                    <p class="mt-2 text-xs italic text-black/50">something is missing</p>
+                    <h2 class="instrument-bold text-5xl">THEFT</h2>
+                    <p class="mt-2 text-xs italic text-black/50">something is missing.</p>
                 </div>
             </div>
         </div>
         <div
             id="case-002"
-            class="case-card absolute right-[8%] top-[35%] z-20
-                rotate-6"
+            class="case-card absolute right-[6%] top-[31%] z-20 rotate-6"
         >
             <div
                 class="absolute -top-3 left-1/2 z-30
-                    h-5 w-5 -translate-x-1/2
-                    rounded-full bg-red-900 shadow-lg"
+                h-5 w-5 -translate-x-1/2
+                rounded-full bg-red-900 shadow-lg"
             ></div>
-            <div class="w-65 bg-white p-3 pb-6 shadow-xl">
+            <div class="w-67.5 bg-white p-3 pb-7 shadow-2xl">
+
+                <div class="mb-3 flex justify-between font-mono text-[9px] text-black/40">
+                    <span>002</span>
+                    <span>OPEN</span>
+                </div>
                 <img
                     src="src/assets/grace.jpg"
                     class="h-47.5 w-full object-cover grayscale"
@@ -740,22 +800,34 @@
                 >
                 <div class="mt-4 px-2">
                     <p class="font-mono text-[10px] text-black/40">CASE 002</p>
-                    <h2 class="instrument-bold text-4xl">MISSING</h2>
+                    <h2 class="instrument-bold text-5xl">MISSING</h2>
                     <p class="mt-2 text-xs italic text-black/50">where did they go?</p>
                 </div>
             </div>
         </div>
         <div
+            class="mt-40 absolute left-[53%] top-[51%] z-30
+            -rotate-6
+            font-serif text-lg italic text-black/45"
+        >
+            <p>something doesn't add up.</p>
+            <p class="text-red-900/70">↓</p>
+            <p>check the evidence.</p>
+        </div>
+        <div
             id="case-003"
-            class="case-card absolute left-[12%] top-[66%] z-20
-                rotate-[4deg]"
+            class="case-card absolute left-[9%] top-[57%] z-20 rotate-[5deg]"
         >
             <div
                 class="absolute -top-3 left-1/2 z-30
-                    h-5 w-5 -translate-x-1/2
-                    rounded-full bg-red-900 shadow-lg"
+                h-5 w-5 -translate-x-1/2
+                rounded-full bg-red-900 shadow-lg"
             ></div>
-            <div class="w-65 bg-white p-3 pb-6 shadow-xl">
+            <div class="w-67.5 bg-white p-3 pb-7 shadow-2xl">
+                <div class="mb-3 flex justify-between font-mono text-[9px] text-black/40">
+                    <span>003</span>
+                    <span>OPEN</span>
+                </div>
                 <img
                     src="src/assets/grace.jpg"
                     class="h-47.5 w-full object-cover grayscale"
@@ -763,22 +835,25 @@
                 >
                 <div class="mt-4 px-2">
                     <p class="font-mono text-[10px] text-black/40">CASE 003</p>
-                    <h2 class="instrument-bold text-4xl">FRAUD</h2>
-                    <p class="mt-2 text-xs italic text-black/50">somebody isn't telling the truth</p>
+                    <h2 class="instrument-bold text-5xl">FRAUD</h2>
+                    <p class="mt-2 text-xs italic text-black/50">somebody isn't telling the truth.</p>
                 </div>
             </div>
         </div>
         <div
             id="case-004"
-            class="case-card absolute right-[12%] top-[65%] z-20
-                rotate-[-5deg]"
+            class="case-card absolute right-[9%] top-[58%] z-20 rotate-[-5deg]"
         >
             <div
                 class="absolute -top-3 left-1/2 z-30
-                    h-5 w-5 -translate-x-1/2
-                    rounded-full bg-red-900 shadow-lg"
+                h-5 w-5 -translate-x-1/2
+                rounded-full bg-red-900 shadow-lg"
             ></div>
-            <div class="w-65 bg-white p-3 pb-6 shadow-xl">
+            <div class="w-67.5 bg-white p-3 pb-7 shadow-2xl">
+                <div class="mb-3 flex justify-between font-mono text-[9px] text-black/40">
+                    <span>004</span>
+                    <span>OPEN</span>
+                </div>
                 <img
                     src="src/assets/grace.jpg"
                     class="h-47.5 w-full object-cover grayscale"
@@ -786,22 +861,38 @@
                 >
                 <div class="mt-4 px-2">
                     <p class="font-mono text-[10px] text-black/40">CASE 004</p>
-                    <h2 class="instrument-bold text-4xl">CYBER</h2>
-                    <p class="mt-2 text-xs italic text-black/50">evidence leaves no footprint</p>
+                    <h2 class="instrument-bold text-5xl">CYBER</h2>
+                    <p class="mt-2 text-xs italic text-black/50">evidence leaves no footprint.
+                    </p>
                 </div>
             </div>
         </div>
+        <!-- stamp -->
+        <div
+            class="absolute right-[8%] top-[73%]
+            z-30 -rotate-12
+            border-4 border-red-900/40
+            px-8 py-4
+            font-mono text-xl tracking-[0.3em]
+            text-red-900/50"
+        >
+            UNFINISHED
+        </div>
         <div
             id="case-005"
-            class="case-card absolute left-1/2 top-[82%] z-20
-                -translate-x-1/2 -rotate-3"
+            class="case-card absolute left-1/2 top-[78%] z-20
+            -translate-x-1/2 -rotate-3"
         >
             <div
                 class="absolute -top-3 left-1/2 z-30
-                    h-5 w-5 -translate-x-1/2
-                    rounded-full bg-red-900 shadow-lg"
+                h-5 w-5 -translate-x-1/2
+                rounded-full bg-red-900 shadow-lg"
             ></div>
-            <div class="w-70 bg-white p-3 pb-6 shadow-xl">
+            <div class="w-72.5 bg-white p-3 pb-8 shadow-2xl">
+                <div class="mb-3 flex justify-between font-mono text-[9px] text-black/40">
+                    <span>005</span>
+                    <span>UNSOLVED</span>
+                </div>
                 <img
                     src="src/assets/grace.jpg"
                     class="h-50 w-full object-cover grayscale"
@@ -809,28 +900,20 @@
                 >
                 <div class="mt-4 px-2">
                     <p class="font-mono text-[10px] text-black/40">CASE 005</p>
-                    <h2 class="instrument-bold text-4xl">UNKNOWN</h2>
+                    <h2 class="instrument-bold text-5xl">UNKNOWN</h2>
                     <p class="mt-2 text-xs italic text-black/50">no clues. no answers.</p>
                 </div>
             </div>
         </div>
         <div
-            class="absolute right-[25%] top-[82%] z-20
-                rotate-[8deg] font-serif italic text-black/40"
+            class="absolute left-[12%] top-[80%]
+            z-30 rotate-[4deg]
+            font-serif text-lg italic text-black/40"
         >
-            <p>don't trust the obvious.</p>
-            <p>follow the string.</p>
-        </div>
-        <div
-            class="absolute bottom-8 left-10 right-10 z-30
-                flex justify-between border-t border-black/20 pt-4"
-        >
-            <span class="text-xs tracking-[0.4em] text-black/40">
-                05 ACTIVE CASES
-            </span>
-            <span class="text-xs tracking-[0.4em] text-black/40">
-                CONNECT THE EVIDENCE
-            </span>
+            <p>five cases.</p>
+            <p>one question.</p>
+            <p class="text-red-900/70">who did it?</p>
+
         </div>
     </section>
     <section
@@ -978,9 +1061,7 @@
             <p class="text-xs tracking-[0.6em] text-white/30">PLAYBACK</p>
             <h2 class="instrument-bold mt-3 text-5xl text-white/80">THE DETECTIVE ON ACTION</h2>
             <p class="mx-auto mt-4 max-w-md text-sm leading-relaxed text-white/30">
-                Some evidence disappears.
-                Some evidence waits.
-                Some evidence was never meant to be seen.
+                Top detective around the world will help you.
             </p>
         </div>
         <div class="absolute bottom-10 right-10 z-30">
