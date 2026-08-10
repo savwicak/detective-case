@@ -3,7 +3,4 @@ node_modules/
 config.json
 *.log
 decet.hmtl
-src/js/about.js
-src/js/news.js
-src/js/scroll.js
 src/js/vhs.js
