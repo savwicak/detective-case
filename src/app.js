@@ -2,15 +2,15 @@ const nav = gsap.timeline()
 
 nav.to({}, {duration:0.5})
 
-//header
+// header
 .set(".navbar", {
-    x:"100"
+    x: "2000px",
+    backgroundColor: "#1e1e1e"
 })
 
 .set(".nav-text", {
-    y:"-100",
-    opacity: 0,
-    duration:2.0
+    y: "-100px",
+    opacity: 0
 })
 
 .to(".navbar", {
@@ -19,10 +19,16 @@ nav.to({}, {duration:0.5})
     ease: "power1.inOut"
 })
 
+.to(".navbar", {
+    backgroundColor: "#ffffff",
+    duration: 0.3,
+    ease: "power2.out"
+})
+
 .to(".nav-text", {
-    y:"0",
-    opacity: 100,
-    ease: "back",
+    y: "0",
+    opacity: 1,
+    ease: "back.out(0.5)",
     stagger: 0.2
 })
 
@@ -192,7 +198,7 @@ const offerTextTL = gsap.timeline({
     scrollTrigger: {
         trigger: "#offer",
         start: "top 20%",
-        end: "+=2500",
+        end: "+=2000",
         scrub: 1,
     }
 });
