@@ -162,7 +162,7 @@ for (let i = 0; i < 20; i++) {
         x: gsap.utils.random(500, 1200),
         y: gsap.utils.random(-200, 600),
         scale: gsap.utils.random(0.6, 1),
-        duration: gsap.utils.random(0.3, 0.7)
+        duration: 4
     });
 }
 
