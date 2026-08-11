@@ -208,8 +208,7 @@ NO FURTHER INVESTIGATION REQUIRED.
 
     "005": {
         title: "CASE 005 — THE SINKING BOAT",
-
-        image: "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/18/2013/07/Dunbar.jpg",
+        image: "https://i.pinimg.com/736x/ee/30/f2/ee30f2fa96c4405ce06dbe9b49621b86.jpg",
 
         content: `
 CASE STATUS: RESOLVED
@@ -258,54 +257,25 @@ RESPONSE PROCEDURES REMAIN CONFIDENTIAL.
 
 };
 
-
-// ==========================
-// OPEN CASE
-// ==========================
-
 const cards = document.querySelectorAll(".news-card");
 
 cards.forEach((card) => {
-
     card.addEventListener("click", () => {
-
-        // Ambil ID dari HTML
         const caseId = card.dataset.case;
-
-        // Cari data berdasarkan ID
         const caseData = cases[caseId];
 
-        // Kalau case tidak ditemukan
         if (!caseData) {
             console.warn(`Case ${caseId} tidak ditemukan.`);
             return;
         }
 
-
-        // ==========================
-        // ISI MODAL
-        // ==========================
-
         modalTitle.textContent = caseData.title;
-
         modalImage.src = caseData.image;
-
         modalContent.textContent = caseData.content;
-
         modalContent.scrollTop = 0;
-
-
-        // ==========================
-        // SHOW MODAL
-        // ==========================
 
         modal.classList.remove("hidden");
         modal.classList.add("flex");
-
-
-        // ==========================
-        // ANIMATION
-        // ==========================
 
         gsap.fromTo(
             modal,
@@ -340,17 +310,7 @@ cards.forEach((card) => {
 
 });
 
-
-// ==========================
-// CLOSE BUTTON
-// ==========================
-
 closeButton.addEventListener("click", closeModal);
-
-
-// ==========================
-// CLICK OUTSIDE MODAL
-// ==========================
 
 modal.addEventListener("click", (e) => {
 
@@ -359,11 +319,6 @@ modal.addEventListener("click", (e) => {
     }
 
 });
-
-
-// ==========================
-// CLOSE MODAL
-// ==========================
 
 function closeModal() {
 

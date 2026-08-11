@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-
 const lenis = new Lenis({
     autoRaf: false,
     smoothWheel: true,
@@ -19,8 +18,6 @@ let lastScroll = 0;
 let scrollTimeout;
 
 lenis.on("scroll", ({ scroll }) => {
-
-    // scroll ke bawah
     if (scroll > lastScroll && scroll > 100) {
 
         gsap.to("#navbar", {
@@ -31,7 +28,6 @@ lenis.on("scroll", ({ scroll }) => {
 
     }
 
-    // scroll ke atas
     if (scroll < lastScroll) {
 
         gsap.to("#navbar", {
@@ -43,8 +39,6 @@ lenis.on("scroll", ({ scroll }) => {
     }
 
     lastScroll = scroll;
-
-    // muncul lagi setelah berhenti scrolling
     clearTimeout(scrollTimeout);
 
     scrollTimeout = setTimeout(() => {

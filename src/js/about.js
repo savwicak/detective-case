@@ -35,8 +35,6 @@ about.addEventListener("mouseenter", () => {
 
 about.addEventListener("mouseleave", hideMagnifier);
 
-
-// Kalau user scroll / navigation lompat ke section lain
 window.addEventListener("scroll", () => {
     const rect = about.getBoundingClientRect();
 

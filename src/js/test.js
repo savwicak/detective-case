@@ -1,10 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-
-
-// ===============================
-// INTRO
-// ===============================
-
 const whyIntro = gsap.timeline({
     scrollTrigger: {
         trigger: "#why-us",
@@ -33,11 +27,6 @@ whyIntro
         opacity: 0,
         duration: 1
     }, "-=0.8");
-
-
-// ===============================
-// FEATURES
-// ===============================
 
 gsap.utils.toArray(".why-feature").forEach((feature, index) => {
 
@@ -84,11 +73,6 @@ gsap.utils.toArray(".why-feature").forEach((feature, index) => {
     }, 0.3);
 
 });
-
-
-// ===============================
-// CTA
-// ===============================
 
 const ctaTL = gsap.timeline({
     scrollTrigger: {

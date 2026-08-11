@@ -101,8 +101,6 @@ hero
     duration: 1
 }, "<");
 
-
-
 const track = document.querySelector(".image-track");
 
 if (track) {
@@ -121,7 +119,6 @@ if (track) {
         }
     });
 }
-
 
 gsap.from("#wobble", {
     opacity: 0,
