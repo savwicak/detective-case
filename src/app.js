@@ -1,7 +1,5 @@
 const nav = gsap.timeline()
 
-nav.to({}, {duration:0.5})
-
 // header
 .set(".navbar", {
     x: "2000px",

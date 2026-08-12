@@ -11,15 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Draggable.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Flip.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Physics2DPlugin.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/TextPlugin.min.js"></script>
   <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
 </head>
 <body class="eb-garamond overflow-x-hidden bg-black">
-    <header>
+    <header class="eb-garamond">
         <nav
             id="navbar"
             class="navbar fixed top-0 left-0 z-50 w-full bg-white p-4">
@@ -32,7 +29,8 @@
                 <div class="flex items-center gap-6">
                     <a class="nav-text hover:underline" href="#">Index</a>
                     <a class="nav-text hover:underline" href="/history.html">History</a>
-                    <a class="nav-text hover:underline" href="#contact">Contact</a>
+                    <a class="nav-text hover:underline" href="/detective.html">Files</a>
+                    <a class="nav-text hover:underline" href="/contact.html">Contact</a>
                 </div>
 
             </div>
@@ -41,20 +39,13 @@
     <main class="mx-auto">
     <section class="relative min-h-80 w-full text-white px-10 py-40">
         <div class="mb-32">
-            <p class="mb-6 text-xs tracking-[0.5em] text-white/40">
-                DETECTIVE.CO / HISTORY
-            </p>
-
-            <h1 class="instrument-bold text-white text-8xl leading-[0.8] md:text-[10rem]">
-                HISTORY
-            </h1>
+            <p class="mb-6 text-xs tracking-[0.5em] text-white/40">DETECTIVE.CO / HISTORY</p>
+            <h1 class="instrument-bold text-white text-8xl leading-[0.8] md:text-[10rem]">HISTORY</h1>
 
             <div class="mt-10 flex max-w-xl items-start gap-5">
                 <span class="mt-2 h-px w-16 bg-white"></span>
-
                 <p class="text-sm leading-relaxed text-white/50">
-                    A record of the people, cases, and decisions that shaped
-                    Detective.co over the years.
+                    A record of the people, cases, and decisions that shaped Detective.co over the years.
                 </p>
             </div>
         </div>
@@ -66,8 +57,8 @@
         <div class="relative mx-auto min-h-175">
             <article
                 class="history-paper absolute left-0 top-0 z-10 w-full
-                min-h-[650px]
-                rotate-[-1deg]
+                min-h-162.5
+                -rotate-6
                 bg-[#faf9f5]
                 p-10
                 shadow-[0_20px_50px_rgba(0,0,0,0.1)]
@@ -75,67 +66,45 @@
             >
                 <div class="flex items-start justify-between border-b border-black/20 pb-5">
                     <div>
-                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">
-                            DETECTIVE.CO / ARCHIVE
-                        </p>
-
-                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">
-                            RECORD 001
-                        </p>
+                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">DETECTIVE.CO / ARCHIVE</p>
+                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">RECORD 001</p>
                     </div>
-
                     <span class="font-mono text-xs tracking-[0.3em]">
                         2005
                     </span>
                 </div>
-
                 <div class="mt-16 grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
                     <div>
-                        <p class="text-xs tracking-[0.4em] text-black/40">
-                            FOUNDATION
-                        </p>
-
-                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">
-                            2005
-                        </h2>
+                        <p class="text-xs tracking-[0.4em] text-black/40">FOUNDATION</p>
+                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">2005</h2>
                     </div>
-
                     <div>
-                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">
-                            The Beginning
-                        </h3>
-
+                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">The Beginning</h3>
                         <p class="mt-8 max-w-xl text-base leading-relaxed text-black/60">
                             Detective.co began as a small investigation service
                             focused on helping people resolve problems that were
                             difficult to handle on their own.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             In the early years, the priority was simple:
                             build trust through reliable work, careful observation,
                             and results that could be verified.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             Every case became an opportunity to establish a
                             reputation based on accuracy rather than promises.
                         </p>
                     </div>
                 </div>
-
                 <div class="absolute bottom-8 left-10 right-10 flex justify-between
                     border-t border-black/10 pt-4 font-mono text-[9px] tracking-[0.3em] text-black/30">
                     <span>HISTORY / 01</span>
                     <span>EST. 2005</span>
                 </div>
             </article>
-
-
-            <!-- 2010 -->
             <article
                 class="history-paper absolute left-0 top-0 z-20 w-full
-                min-h-[650px]
+                min-h-162.5
                 rotate-[1.5deg]
                 bg-[#f5f3ed]
                 p-10
@@ -144,48 +113,30 @@
             >
                 <div class="flex items-start justify-between border-b border-black/20 pb-5">
                     <div>
-                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">
-                            DETECTIVE.CO / ARCHIVE
-                        </p>
-
-                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">
-                            RECORD 002
-                        </p>
+                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">DETECTIVE.CO / ARCHIVE</p>
+                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">RECORD 002</p>
                     </div>
-
                     <span class="font-mono text-xs tracking-[0.3em]">
                         2010
                     </span>
                 </div>
-
                 <div class="mt-16 grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
                     <div>
-                        <p class="text-xs tracking-[0.4em] text-black/40">
-                            INTERRUPTION
-                        </p>
-
-                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">
-                            2010
-                        </h2>
+                        <p class="text-xs tracking-[0.4em] text-black/40">INTERRUPTION</p>
+                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">2010</h2>
                     </div>
-
                     <div>
-                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">
-                            The Shutdown
-                        </h3>
-
+                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">The Shutdown</h3>
                         <p class="mt-8 max-w-xl text-base leading-relaxed text-black/60">
                             After several years of operation, Detective.co was
                             forced to discontinue its activities following a
                             public demonstration that significantly affected
                             the organization.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             The service was disbanded and its operations were
                             temporarily suspended.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             The period became an important point of reflection
                             on how investigations should be conducted and how
@@ -193,19 +144,15 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="absolute bottom-8 left-10 right-10 flex justify-between
                     border-t border-black/10 pt-4 font-mono text-[9px] tracking-[0.3em] text-black/30">
                     <span>HISTORY / 02</span>
                     <span>OPERATIONS SUSPENDED</span>
                 </div>
             </article>
-
-
-            <!-- 2014 -->
             <article
                 class="history-paper absolute left-0 top-0 z-30 w-full
-                min-h-[650px]
+                min-h-162.5
                 rotate-[-0.8deg]
                 bg-[#faf9f5]
                 p-10
@@ -214,47 +161,29 @@
             >
                 <div class="flex items-start justify-between border-b border-black/20 pb-5">
                     <div>
-                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">
-                            DETECTIVE.CO / ARCHIVE
-                        </p>
-
-                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">
-                            RECORD 003
-                        </p>
+                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">DETECTIVE.CO / ARCHIVE</p>
+                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">RECORD 003</p>
                     </div>
-
                     <span class="font-mono text-xs tracking-[0.3em]">
                         2014
                     </span>
                 </div>
-
                 <div class="mt-16 grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
                     <div>
-                        <p class="text-xs tracking-[0.4em] text-black/40">
-                            REBUILDING
-                        </p>
-
-                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">
-                            2014
-                        </h2>
+                        <p class="text-xs tracking-[0.4em] text-black/40">REBUILDING</p>
+                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">2014</h2>
                     </div>
-
                     <div>
-                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">
-                            Earning Trust Again
-                        </h3>
-
+                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">Earning Trust Again</h3>
                         <p class="mt-8 max-w-xl text-base leading-relaxed text-black/60">
                             Detective.co returned with a revised approach to
                             investigation and public communication.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             Instead of rebuilding through scale, the organization
                             focused on smaller cases, transparent procedures,
                             and consistent results.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             Gradually, confidence was restored through the work
                             itself and through relationships built with the
@@ -262,7 +191,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="absolute bottom-8 left-10 right-10 flex justify-between
                     border-t border-black/10 pt-4 font-mono text-[9px] tracking-[0.3em] text-black/30">
                     <span>HISTORY / 03</span>
@@ -271,8 +199,8 @@
             </article> 
             <article
                 class="history-paper absolute left-0 top-0 z-40 w-full
-                min-h-[650px]
-                rotate-[1deg]
+                min-h-162.5
+                -rotate-1
                 bg-[#f3f1eb]
                 p-10
                 shadow-[0_20px_50px_rgba(0,0,0,0.1)]
@@ -280,41 +208,24 @@
             >
                 <div class="flex items-start justify-between border-b border-black/20 pb-5">
                     <div>
-                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">
-                            DETECTIVE.CO / ARCHIVE
-                        </p>
-
-                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">
-                            RECORD 004
-                        </p>
+                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">DETECTIVE.CO / ARCHIVE</p>
+                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">RECORD 004</p>
                     </div>
-
                     <span class="font-mono text-xs tracking-[0.3em]">
                         2019
                     </span>
                 </div>
-
                 <div class="mt-16 grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
                     <div>
-                        <p class="text-xs tracking-[0.4em] text-black/40">
-                            EXPANSION
-                        </p>
-
-                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">
-                            2019
-                        </h2>
+                        <p class="text-xs tracking-[0.4em] text-black/40">EXPANSION</p>
+                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">2019</h2>
                     </div>
-
                     <div>
-                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">
-                            A Wider Scope
-                        </h3>
-
+                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">A Wider Scope</h3>
                         <p class="mt-8 max-w-xl text-base leading-relaxed text-black/60">
                             As the organization grew, Detective.co expanded the
                             types of investigations it was prepared to handle.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             Cases increasingly involved digital records,
                             complex timelines, missing information, and
@@ -323,19 +234,16 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="absolute bottom-8 left-10 right-10 flex justify-between
                     border-t border-black/10 pt-4 font-mono text-[9px] tracking-[0.3em] text-black/30">
                     <span>HISTORY / 04</span>
                     <span>EXPANDED OPERATIONS</span>
                 </div>
             </article>
-
-
             <article
                 class="history-paper absolute left-0 top-0 z-50 w-full
-                min-h-[650px]
-                rotate-[-1deg]
+                min-h-162.5
+                -rotate-4
                 bg-[#faf9f5]
                 p-10
                 shadow-[0_20px_50px_rgba(0,0,0,0.18)]
@@ -343,42 +251,25 @@
             >
                 <div class="flex items-start justify-between border-b border-black/20 pb-5">
                     <div>
-                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">
-                            DETECTIVE.CO / ARCHIVE
-                        </p>
-
-                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">
-                            RECORD 005
-                        </p>
+                        <p class="font-mono text-[10px] tracking-[0.4em] text-black/40">DETECTIVE.CO / ARCHIVE</p>
+                        <p class="mt-2 font-mono text-[10px] tracking-[0.3em] text-black/30">RECORD 005</p>
                     </div>
-
                     <span class="font-mono text-xs tracking-[0.3em]">
                         PRESENT
                     </span>
                 </div>
-
                 <div class="mt-16 grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
                     <div>
-                        <p class="text-xs tracking-[0.4em] text-black/40">
-                            CURRENT
-                        </p>
-
-                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">
-                            NOW
-                        </h2>
+                        <p class="text-xs tracking-[0.4em] text-black/40">CURRENT</p>
+                        <h2 class="instrument-bold mt-5 text-6xl leading-none md:text-7xl">NOW</h2>
                     </div>
-
                     <div>
-                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">
-                            Still Investigating
-                        </h3>
-
+                        <h3 class="instrument-bold text-4xl leading-none md:text-5xl">Still Investigating</h3>
                         <p class="mt-8 max-w-xl text-base leading-relaxed text-black/60">
                             Today, Detective.co continues to handle investigations
                             that require careful observation, structured analysis,
                             and discretion.
                         </p>
-
                         <p class="mt-6 max-w-xl text-base leading-relaxed text-black/60">
                             The organization remains focused on the same principle
                             established at the beginning:
@@ -387,14 +278,12 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="absolute bottom-8 left-10 right-10 flex justify-between
                     border-t border-black/10 pt-4 font-mono text-[9px] tracking-[0.3em] text-black/30">
                     <span>HISTORY / 05</span>
                     <span>ACTIVE</span>
                 </div>
             </article>
-
         </div>
     </section>
     <section
@@ -458,7 +347,8 @@
             </div>
         </section>
     </main>
-  <script src="src/js/scroll.js"></script>
-  <script src="src/js/history.js"></script>
+    <script src="src/js/scroll.js"></script>
+    <script src="src/js/history.js"></script>
+    <script src="src/app.js"></script>
 </body>
 </html>

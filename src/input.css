@@ -49,3 +49,71 @@
     transform-origin: center;
     will-change: transform;
 }
+
+
+/* detective section */
+
+@keyframes glitch {
+
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-3px, 2px);
+    }
+
+    40% {
+        transform: translate(3px, -2px);
+    }
+
+    60% {
+        transform: translate(-2px, 1px);
+    }
+
+    80% {
+        transform: translate(2px, -1px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+
+}
+
+.glitch {
+    animation: glitch .15s infinite;
+}
+
+@keyframes scan {
+
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+
+}
+
+.scanline {
+    animation: scan 7s linear infinite;
+}
+
+.database-card {
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.database-card:hover {
+    transform: translateX(5px);
+}
+
+.active-tab {
+    color: #d0bf87;
+    border-color: #a99a68;
+    background: rgba(169, 154, 104, .06);
+}
