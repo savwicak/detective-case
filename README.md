@@ -1,9 +1,14 @@
-# DETECTIVE.CO WEBSITE 
+# WEBSITE COMPANY PROFILE DETECTIVE.CO
 
-## THIS IS A FAKE COMPANY
+### THIS IS A FAKE COMPANY
 hii I made this website to learn GSAP and because I love detectives!! It's about a (fake) company profile, I love this website so much because I use the scroll behavior thing, making it really elegant :DD you can even try to be a detective on the Files page, and there are soooo many animationss C:
 
 AI USAGE: I use AI to make the data in JS (news.js and case.js in the js folder). I did edit them to match the text I want
+
+IMAGE USAGE: i use google image and pinterest some of the images have watermarks (hehe)
+
+<img width="1896" height="994" alt="image" src="https://github.com/user-attachments/assets/e7b33626-a017-4ca8-8447-e26bfadcec31" />
+<img width="1879" height="994" alt="image" src="https://github.com/user-attachments/assets/45dd78c0-cf8c-4f8b-a97f-03209d3ea0c6" />
 
 ## Tech Stack
 
