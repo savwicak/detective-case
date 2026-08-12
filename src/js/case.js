@@ -3,196 +3,200 @@ let correctCount = 0;
 
 const cases = [
 
-    {
-        id: "CASE-001",
+{
+    id: "CASE-001",
 
-        title: "WHO STOLE THE FOOD?",
+    title: "WHO STOLE THE FOOD?",
 
-        time: "19:30 — 19:45",
+    time: "19:30 — 19:45",
 
-        answer: "larry",
+    answer: "larry",
 
 
-        summary:
-            "A container of chocolate cookies disappeared from the kitchen. Four subjects were present in the residence during the estimated theft window. The family cat was immediately blamed, but the available records suggest otherwise.",
+    summary:
+        "A container of chocolate cookies disappeared from the kitchen. Four subjects were present in the residence during the estimated theft window. The family cat was immediately blamed, but the available records suggest otherwise.",
 
 
-        // data subject
+    // subject data
+    subjects: [
 
-        subjects: [
-            {
-                nickname: "DAMIELA",
-                name: "Damiela Lawson",
-                age: 34,
-                role: "WIFE",
-                job: "Accountant",
-                type: "PERSON",
+        {
+            nickname: "DAMIELA",
+            name: "Damiela Lawson",
+            age: 34,
+            role: "WIFE",
+            job: "Accountant",
+            type: "PERSON",
 
-                profile:
-                    "Organized and observant. Mia manages most household routines and is usually responsible for preparing and storing food in the kitchen.",
+            profile:
+                "Organized and observant. Damiela manages most household routines and is usually responsible for preparing and storing food in the kitchen.",
 
-                status:
-                    "PERSON OF INTEREST"
-            },
+            status:
+                "PERSON OF INTEREST"
+        },
 
 
-            {
-                nickname: "LARRY",
-                name: "Larry Lawson",
-                age: 36,
-                role: "HUSBAND",
-                job: "Farmer",
-                type: "PERSON",
+        {
+            nickname: "LARRY",
+            name: "Larry Lawson",
+            age: 36,
+            role: "HUSBAND",
+            job: "Farmer",
+            type: "PERSON",
 
-                profile:
-                    "Calm and confident. Daniel frequently watches television in the evening and is known to snack late at night.",
+            profile:
+                "Calm and confident. Larry frequently watches television in the evening and is known to snack late at night.",
 
-                status:
-                    "PERSON OF INTEREST"
-            },
+            status:
+                "PERSON OF INTEREST"
+        },
 
 
-            {
-                nickname: "MIKE",
-                name: "Michael Donald Lawson",
-                age: 7,
-                role: "KID",
-                job: "Student",
-                type: "PERSON",
+        {
+            nickname: "MIKE",
+            name: "Michael Donald Lawson",
+            age: 7,
+            role: "KID",
+            job: "Student",
+            type: "PERSON",
 
-                profile:
-                    "Curious and easily distracted. Leo has a strong interest in snacks and knows the family's daily routine.",
+            profile:
+                "Curious and easily distracted. Mike has a strong interest in snacks and knows the family's daily routine.",
 
-                status:
-                    "PERSON OF INTEREST"
-            },
+            status:
+                "PERSON OF INTEREST"
+        },
 
 
-            {
-                nickname: "COOKIE",
-                name: "COOKIE MONSTER",
-                age: 4,
-                role: "CAT",
-                job: "House Cat",
-                type: "ANIMAL",
+        {
+            nickname: "COOKIE",
+            name: "Cookie Monster",
+            age: 4,
+            role: "CAT",
+            job: "House Cat",
+            type: "ANIMAL",
 
-                profile:
-                    "Sneaky, curious, food-motivated, and frequently enters the kitchen. Known to knock objects from surfaces.",
+            profile:
+                "Sneaky, curious, food-motivated, and frequently enters the kitchen. Known to knock objects from surfaces.",
 
-                status:
-                    "PRIMARY SUSPECT"
-            }
+            status:
+                "PRIMARY SUSPECT"
+        }
 
-        ],
+    ],
 
 
-        // evidence data 
-        evidence: [
+    // evidence
+    evidence: [
 
-            {
-                id: "EV-001",
+        {
+            id: "EV-001",
 
-                title: "COOKIE CONTAINER",
+            title: "COOKIE CONTAINER",
 
-                source: "KITCHEN",
+            source: "KITCHEN",
 
-                description:
-                    "The cookie container was discovered closed on the kitchen counter. The cookies inside were completely missing.",
-            },
+            description:
+                "The cookie container was discovered closed on the kitchen counter. The cookies inside were completely missing."
+        },
 
 
-            {
-                id: "EV-002",
+        {
+            id: "EV-002",
 
-                title: "COOKIE CRUMBS",
+            title: "COOKIE CRUMBS",
 
-                source: "KITCHEN → LIVING ROOM",
+            source: "KITCHEN → LIVING ROOM",
 
-                description:
-                    "Small cookie crumbs were found near the kitchen doorway. The trail continues toward the living room.",
-            },
+            description:
+                "Small cookie crumbs were found near the kitchen doorway. The trail continues toward the living room."
+        },
 
 
-            {
-                id: "EV-003",
+        {
+            id: "EV-003",
 
-                title: "TELEVISION REMOTE",
+            title: "TELEVISION REMOTE",
 
-                source: "KITCHEN COUNTER",
+            source: "KITCHEN COUNTER",
 
-                description:
-                    "The television remote was discovered on the kitchen counter despite the husband claiming he remained in the living room.",
-            },
+            description:
+                "The television remote was discovered on the kitchen counter despite LARRY claiming he remained in the living room."
+        },
 
 
-            {
-                id: "EV-004",
+        {
+            id: "EV-004",
 
-                title: "CAT LOCATION",
+            title: "CAT LOCATION",
 
-                source: "LIVING ROOM",
+            source: "LIVING ROOM",
 
-                description:
-                    "SIFA was found near the sofa. No cookie crumbs were discovered around the cat's food bowl.",
-            },
+            description:
+                "COOKIE was found near the sofa. No cookie crumbs were discovered around the cat's food bowl."
+        },
 
 
-            {
-                id: "EV-005",
+        {
+            id: "EV-005",
 
-                title: "LAST CONFIRMED SIGHTING",
+            title: "LAST CONFIRMED SIGHTING",
 
-                source: "MIA",
+            source: "DAMIELA",
 
-                description:
-                    "The cookies were confirmed to be present at approximately 19:25.",
-            }
+            description:
+                "The cookies were confirmed to be present at approximately 19:25."
+        }
 
-        ],
+    ],
 
-        // introgatrion data 
-        interrogation: [
+    //introgation
+    interrogation: [
 
-            {
-                nickname: "MIA",
-                role: "WIFE",
+        {
+            nickname: "DAMIELA",
+            name: "Damiela Lawson",
+            role: "WIFE",
 
-                statement:
-                    "I put the cookies on the kitchen counter after dinner. Then I went upstairs to get some clothes. When I came back, they were gone.",
-            },
+            statement:
+                "I put the cookies on the kitchen counter after dinner. Then I went upstairs to get some clothes. When I came back, they were gone."
+        },
 
 
-            {
-                nickname: "DAN",
-                role: "HUSBAND",
+        {
+            nickname: "LARRY",
+            name: "Larry Lawson",
+            role: "HUSBAND",
 
-                statement:
-                    "I was watching television in the living room. I never went into the kitchen.",
-            },
+            statement:
+                "I was watching television in the living room. I never went into the kitchen."
+        },
 
 
-            {
-                nickname: "LEO",
-                role: "KID",
+        {
+            nickname: "MIKE",
+            name: "Michael Donald Lawson",
+            role: "KID",
 
-                statement:
-                    "I saw the cookies on the counter. I wanted some, but I went to my room. I didn't take them.",
-            },
+            statement:
+                "I saw the cookies on the counter. I wanted some, but I went to my room. I didn't take them."
+        },
 
 
-            {
-                nickname: "SIFA",
-                role: "CAT",
+        {
+            nickname: "COOKIE",
+            name: "Cookie Monster",
+            role: "CAT",
 
-                statement:
-                    "MEOW",
-            }
+            statement:
+                "MEOW"
+        }
 
-        ],
+    ],
 
-        solution:
-            "The actual thief was DAN. His statement claims he never entered the kitchen, yet his television remote was found on the kitchen counter. The cookie crumb trail also leads from the kitchen toward the living room. SIFA was deliberately made to appear suspicious because of the cat's reputation for sneaking around the kitchen. However, there is no physical evidence proving SIFA took the cookies."
-    }
+    solution:
+        "The actual thief was LARRY. His statement claims he never entered the kitchen, yet his television remote was found on the kitchen counter. The cookie crumb trail also leads from the kitchen toward the living room. COOKIE was deliberately made to appear suspicious because of the cat's reputation for sneaking around the kitchen. However, there is no physical evidence proving COOKIE took the cookies."
+}
 
 ];
 
